@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Crow Song</title>
+  <link rel="icon" type="image/x-icon" href="favicon/lcon.png">
+  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+  <script>
+    function playvideo() {
+      var video = document.getElementById("clickyme");
+      video.play(); 
+    }
+    function removebuttonpaper() {
+      var overlay = document.getElementById('buttonpaper');
+      overlay.style.display = 'none'; 
+    }
+  </script>
+  <style>
+
+    #buttonpaper{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1); 
+      color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+    }
+
+    .button{
+      background-color: #ff0000;  
+      font-family: 'Bangers';
+      color: rgba(0, 0, 0, 1);           
+      padding: 15px 30px;     
+      font-size: 45px;         
+      border: none;             
+      border-radius: 10px;       
+      cursor: pointer;           
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      transition: background-color 0.3s ease; 
+    }
+
+    body{
+      margin: 0;
+      overflow: hidden;
+      background-color:rgba(0, 0, 0, 1);
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div id="buttonpaper">
+    <button class="button" onclick="playvideo(); removebuttonpaper();">Click Me!</button>
+  </div>
+
+
+
+  <video width="100%" height="auto" id="clickyme">
+    <source src="tha song/Crow Song.mp4" type="video/mp4">
+    change browser nerd!
+  </video>
+
+
+</body>
+</html>
